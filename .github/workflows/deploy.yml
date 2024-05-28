@@ -1,0 +1,24 @@
+name: AdminPanel Vite CI
+
+on:
+  push:
+    branches: [ main ]
+
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: [frontend]
+    steps:
+      - name: Remove local changes ⚖️
+        run: cd /root/soacs-admin && git reset --hard HEAD
+        
+      - name: Pull Repository ⚖️
+        run: cd /root/soacs-admin && git pull origin main
+        
+      - name: Install Dependencies ❤️
+        run: cd /root/soacs-admin && npm install
+
+      - name: Build the app ⚙️
+        run: cd /root/soacs-admin && npm run build

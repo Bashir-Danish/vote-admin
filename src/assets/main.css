@@ -1,0 +1,84 @@
+@import "./base.css";
+
+.main-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: white;
+  border-radius: 60px;
+  border: 0;
+  padding: 0 16px;
+  background: var(--vt-c-secondary);
+  font-family: inherit;
+  height: 40px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  transition: all 0.35s ease;
+}
+
+.main-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: rgba(0, 0, 0, 0.15) 0 10px 15px -3px,
+    rgba(0, 0, 0, 0.1) 0px 4px 6px -2px;
+}
+
+.main-btn:active {
+  transform: translateY(0px);
+}
+
+.main-btn>span {
+  margin-left: 12px;
+  font-weight: bold;
+}
+
+.main-btn>i {
+  width: 16px;
+  height: 16px;
+}
+
+.blue-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: white;
+  border-radius: 60px;
+  border: 0;
+  padding: 0 16px;
+  background: var(--vt-c-indigo);
+  font-family: inherit;
+  height: 30px;
+  transition: all 0.2s ease;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+
+.blue-btn:hover {
+  opacity: .9;
+}
+
+.vm {
+  border-radius: 12px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  direction: rtl;
+  padding: 16px;
+}
+
+.vm .vm-titlebar {
+  border: none;
+}
+
+.vm .vm-titlebar>.vm-btn-close {
+  float: left;
+  outline: none !important;
+  border: none !important;
+}
+
+.vm .vm-titlebar .vm-title {
+  font-family: var(--vt-f-main), sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.vm .vm-titlebar>.vm-btn-close::before {
+  color: rgb(99, 99, 99);
+}
